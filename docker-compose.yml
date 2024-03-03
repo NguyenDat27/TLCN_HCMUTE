@@ -1,0 +1,47 @@
+version: "3.4"
+
+#NETWORK
+networks:
+    springboot-app-network:
+        driver: bridge
+
+#SERVICES
+services:
+    # Frontend
+    # Vite + React
+    vite-react:
+        container_name: ReactApp
+        build:
+            dockerfile: Dockerfile
+            context: ./client
+        ports:
+            - "5173:5173"
+        volumes:
+            - ./client:/app
+        networks:
+            - springboot-app-network
+    # Backend
+    # Springboot
+    java-springboot:
+        container_name: JavaAPI
+        build:
+            dockerfile: Dockerfile
+            context: ./server/springboot
+        ports:
+            - "8080:8080"
+        volumes:
+            - ./server/springboot:/app
+        networks:
+            - springboot-app-network
+    # Flask
+    flask-python:
+        container_name: PythonAPI
+        build:
+            dockerfile: Dockerfile
+            context: ./server/flask
+        # ports:
+        #   - "5000:5000"
+        volumes:
+            - ./server/flask:/app
+        networks:
+            - springboot-app-network

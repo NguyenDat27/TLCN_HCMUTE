@@ -1,0 +1,88 @@
+.navbar-section {
+    padding: 0 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: white;
+}
+
+.image_logo {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    width: 70px;
+    height: 70px;
+}
+.navbar-title a {
+    color: #1A8EFD;
+    letter-spacing: .6px;
+    text-decoration: none;
+}
+.navbar-title {
+    font-family: 'Poppins', sans-serif;
+}
+.navbar-sign {
+    color: #54de54;
+    font-family: Cambria, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+.navbar-items {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    font-family: 'Rubik', sans-serif;
+}
+.navbar-items > li {
+    list-style-type: none;
+}
+.navbar-links {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    letter-spacing: .8px;
+}
+.navbar-links:hover {
+    color: #00FF00	;
+}
+
+.navbar_LoRe {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar_LoRe li {
+    margin: 0 10px;
+}
+
+.navbar_LoRe a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    letter-spacing: .8px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-link:hover {
+    color: #DC143C;
+}
+
+ion-icon {
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+    .navbar-btn, .navbar-items {
+        display: none;
+    }
+    .mobile-nav {
+        display: block;
+    }
+}
